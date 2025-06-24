@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get "produtos", to: "produtos#index"
+  get "/produtos", to: "produtos#index"
 end

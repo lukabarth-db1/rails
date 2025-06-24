@@ -9,27 +9,23 @@
     <table>
         <thead>
             <tr>
-                <td>Nome</td>
-                <td>Descrição</td>
-                <td>Preço</td>
-                <td>Quantidade</td>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
             </tr>
         </thead>
         <tbody>
+        <% @produtos.each do |produto| %>
             <tr>
-                <td>Camiseta</td>
-                <td>Bem bonita</td>
-                <td>30</td>
-                <td>10</td>
+                <th>
+                <%= produto.nome %></th>
+                <th> <%= produto.descricao %></th>
+                <th> <%= produto.preco %> </th>
+                <th><%= produto.quantidade %></th>
             </tr>
-            <tr>
-                <td>Luva</td>
-                <td>Para os dias frios</td>
-                <td>39</td>
-                <td>5</td>
-            </tr>
+            <% end %>
         </tbody>
     </table>
-    
 </body>
 </html>

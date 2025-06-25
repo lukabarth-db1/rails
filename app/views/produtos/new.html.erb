@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <h1>Novo produto</h1>
+        <%= form_with model: @produto do |form| %>
+            <div>
+                <%= form.label :nome, "Nome" %>
+                <%= form.text_field :nome %>
+            </div>
+
+            <div>
+                <%= form.label :descricao, "Descrição" %>
+                <%= form.textarea :descricao %>
+            </div>
+
+            <div>
+                <%= form.label :preco, "Preço" %>
+                <%= form.number_field :preco, step: 0.01 %>
+            </div>
+
+            <div>
+                <%= form.label :quantidade, "Quantidade" %>
+                <%= form.number_field :quantidade %>
+            </div>
+            <%= form.submit %>
+        <% end %>
+    </body>
+</html>
